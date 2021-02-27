@@ -103,7 +103,7 @@ public class RedesController {
 				BufferedReader buffer = new BufferedReader(leitor);
 				String linha = buffer.readLine();
 				int c = 0;
-				while (c <= 11) {
+				while (c <= 10) {
 					String[] tempo = linha.split(" ");
 					for (String palavras : tempo) {
 						if (palavras.contains("tempo")) {
@@ -111,9 +111,10 @@ public class RedesController {
 						}
 					}
 					linha = buffer.readLine();
+					c++;
 				}
+				buffer.readLine();
 				while (linha != null) {
-
 					if (linha.contains("min/avg")) {
 						System.out.println(linha);	
 					}
@@ -128,4 +129,3 @@ public class RedesController {
 		}
 	}
 }
-
