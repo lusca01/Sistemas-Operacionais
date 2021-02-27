@@ -9,21 +9,23 @@ public class Main {
 	public static void main(String[] args) {
 		RedesController controller = new RedesController();
 		int op = 0;
-		op = Integer.parseInt(JOptionPane.showInputDialog("1 - IP do Host \n2 - PING do Uol \n3 - EXIT"));
-		String os = System.getProperty("os.name");
-		switch (op) {
-		case 1:
-			controller.ip(os);
-			break;
-		case 2:
-			controller.ping(os);
-			break;
-		case 3:
-			JOptionPane.showMessageDialog(null,"Encerrando...");
-			break;
-		default:
-			JOptionPane.showMessageDialog(null,"Opção inválida.");
-		}
+		do {
+			op = Integer.parseInt(JOptionPane.showInputDialog("1 - IP do Host \n2 - PING do Uol \n3 - EXIT"));
+			String os = System.getProperty("os.name");
+			switch (op) {
+			case 1:
+				controller.ip(os);
+				break;
+			case 2:
+				controller.ping(os);
+				break;
+			case 3:
+				JOptionPane.showMessageDialog(null,"Encerrando...");
+				break;
+			default:
+				JOptionPane.showMessageDialog(null,"Opção inválida.");
+			}
+		}while (op != 3);
 	}
 }
 
