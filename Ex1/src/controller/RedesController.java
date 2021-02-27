@@ -70,7 +70,7 @@ public class RedesController {
 				BufferedReader buffer = new BufferedReader(leitor);
 				String linha = buffer.readLine();
 				int c = 0;
-				while (c <= 11) {
+				while (c <= 10) {
 					String[] tempo = linha.split(" ");
 					for (String palavras : tempo) {
 						if (palavras.contains("tempo")) {
